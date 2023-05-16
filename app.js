@@ -8,11 +8,11 @@ app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("./public"));
-var newServerItem = [];
+let newServerItem = [];
 let workList = [];
 
 app.get("/", function(req, res) {
-    var day = date("en-US");
+    const day = date.getDay("en-US");
     res.render("list", { listTitle: day, newListItem: newServerItem });
 });
 
