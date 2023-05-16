@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-    <title>To Do List</title>
-</head>
-
-<body>
+<%- include("header") -%>
     <div class="box" id="heading">
         <h1>
-            <%= kindOfDay %>
+            <%= listTitle %>
         </h1>
     </div>
     <div class="box">
@@ -29,15 +15,11 @@
             </div>
             <% }; %>
 
-                <div class="item form">
+                <div class="form item">
                     <form action="/" method="post" autocomplete="off">
                         <input type="text" name="newItem" id="text" placeholder="new element">
-                        <button type="submit" name="submit">+</button>
-                        <button formaction="/reset" name="reset">reset</button>
+                        <button type="submit" name="list" value="<%= listTitle %>">+</button>
+                        <button formaction="/reset" name="reset" value="<%= listTitle %>">reset</button>
                     </form>
                 </div>
-    </div>
-
-</body>
-
-</html>
+                <%- include("footer") -%>

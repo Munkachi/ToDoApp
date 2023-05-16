@@ -43,6 +43,10 @@ form {
     justify-content: end;
 }
 
+.form {
+    padding: 0px !important;
+}
+
 input[type="text"] {
     background-color: transparent;
     border: none;
@@ -55,37 +59,31 @@ input:active {
     outline: none;
     box-shadow: none;
     background-color: transparent;
+    border-bottom: 5px #0A4D68;
+    border-bottom-style: dashed;
 }
 
 button[name="reset"] {
-    margin: 5px;
     font-size: 1.15rem;
     background-color: #0A4D68;
     border: none;
-    border-radius: 50%;
     color: #05BFDB;
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
 }
 
-button[name="submit"] {
-    margin: 5px;
+button[name="list"] {
     font-size: 2rem;
     background-color: #0A4D68;
     border: none;
-    border-radius: 50%;
     color: #05BFDB;
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
 }
 
 p {
     margin: 10px 20px;
     display: inline-block;
-}
-
-input[type=checkbox]:checked+label.strikethrough {
-    text-decoration: line-through;
 }
 
 input:checked+p {
@@ -96,5 +94,13 @@ input:checked+p {
 
 #text {
     font-family: 'Orbitron', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1 rem;
+    width: calc(100% - 200px);
+    text-align: center;
+    margin: 10px;
+}
+
+::placeholder {
+    color: #0A4D68;
+    opacity: 1;
 }
