@@ -1,0 +1,100 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    height: 100vh;
+    background: linear-gradient(45deg, #0A4D68 40%, #088395 40%);
+}
+
+.box {
+    width: 40%;
+    background-color: #05BFDB;
+    box-shadow: 5px 5px 5px #00000020;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+}
+
+#heading {
+    font-size: 1.2rem;
+    background-color: #0A4D68;
+    color: #05BFDB;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    padding: 20px;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 0;
+    border-bottom: 1px solid #0A4D6880;
+}
+
+.item:last-child {
+    border-bottom: 0px;
+}
+
+input[type="checkbox"] {
+    margin: 10px;
+}
+
+form {
+    display: flex;
+    justify-content: end;
+}
+
+input[type="text"] {
+    background-color: transparent;
+    border: none;
+}
+
+input,
+input:focus,
+input:hover,
+input:active {
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+button[name="reset"] {
+    margin: 5px;
+    font-size: 1.15rem;
+    background-color: #0A4D68;
+    border: none;
+    border-radius: 50%;
+    color: #05BFDB;
+    height: 50px;
+    width: 50px;
+}
+
+button[name="submit"] {
+    margin: 5px;
+    font-size: 2rem;
+    background-color: #0A4D68;
+    border: none;
+    border-radius: 50%;
+    color: #05BFDB;
+    height: 50px;
+    width: 50px;
+}
+
+p {
+    margin: 10px 20px;
+    display: inline-block;
+}
+
+input[type=checkbox]:checked+label.strikethrough {
+    text-decoration: line-through;
+}
+
+input:checked+p {
+    text-decoration: line-through;
+    text-decoration-color: #0A4D68;
+    text-decoration-thickness: 3px;
+}
+
+#text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+}
